@@ -1,0 +1,7 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "plugins": [
+    {"name": "./almost-es2015.js"}
+  ]
+}
