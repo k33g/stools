@@ -1,0 +1,2002 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "Functor",
+            "range": [
+              6,
+              13
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 6
+              },
+              "end": {
+                "line": 1,
+                "column": 13
+              }
+            }
+          },
+          "init": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "require",
+              "range": [
+                16,
+                23
+              ],
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 16
+                },
+                "end": {
+                  "line": 1,
+                  "column": 23
+                }
+              }
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "value": "./Functor.js",
+                "raw": "'./Functor.js'",
+                "range": [
+                  24,
+                  38
+                ],
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 24
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 38
+                  }
+                }
+              }
+            ],
+            "range": [
+              16,
+              39
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 16
+              },
+              "end": {
+                "line": 1,
+                "column": 39
+              }
+            }
+          },
+          "range": [
+            6,
+            39
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 39
+            }
+          }
+        }
+      ],
+      "kind": "const",
+      "range": [
+        0,
+        40
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 40
+        }
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Monad\n * Yo Ma! I'm a Monad\n ",
+          "range": [
+            42,
+            80
+          ],
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "id": {
+        "type": "Identifier",
+        "name": "Monad",
+        "range": [
+          87,
+          92
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 6
+          },
+          "end": {
+            "line": 7,
+            "column": 11
+          }
+        }
+      },
+      "superClass": {
+        "type": "Identifier",
+        "name": "Functor",
+        "range": [
+          101,
+          108
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 20
+          },
+          "end": {
+            "line": 7,
+            "column": 27
+          }
+        }
+      },
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "constructor",
+              "range": [
+                196,
+                207
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 2
+                },
+                "end": {
+                  "line": 12,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "x",
+                  "range": [
+                    208,
+                    209
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 12,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 15
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Super",
+                        "range": [
+                          217,
+                          222
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 9
+                          }
+                        }
+                      },
+                      "arguments": [
+                        {
+                          "type": "Identifier",
+                          "name": "x",
+                          "range": [
+                            223,
+                            224
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 13,
+                              "column": 10
+                            },
+                            "end": {
+                              "line": 13,
+                              "column": 11
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        217,
+                        225
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 12
+                        }
+                      }
+                    },
+                    "range": [
+                      217,
+                      226
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 13
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  211,
+                  230
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 17
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                207,
+                230
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 13
+                },
+                "end": {
+                  "line": 14,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "constructor",
+            "computed": false,
+            "range": [
+              196,
+              230
+            ],
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 2
+              },
+              "end": {
+                "line": 14,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @param {Object} x is the value of the Monad.\n   * @return {Monad}\n   ",
+                "range": [
+                  113,
+                  193
+                ],
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   ",
+                "range": [
+                  233,
+                  341
+                ],
+                "loc": {
+                  "start": {
+                    "line": 15,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "of",
+              "range": [
+                351,
+                353
+              ],
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 9
+                },
+                "end": {
+                  "line": 20,
+                  "column": 11
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "x",
+                  "range": [
+                    354,
+                    355
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 13
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "NewExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "Monad",
+                        "range": [
+                          374,
+                          379
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 15
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "arguments": [
+                        {
+                          "type": "Identifier",
+                          "name": "x",
+                          "range": [
+                            380,
+                            381
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 21,
+                              "column": 21
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 22
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        370,
+                        382
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 23
+                        }
+                      }
+                    },
+                    "range": [
+                      363,
+                      383
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 24
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  357,
+                  387
+                ],
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 22,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                353,
+                387
+              ],
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 11
+                },
+                "end": {
+                  "line": 22,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              344,
+              387
+            ],
+            "loc": {
+              "start": {
+                "line": 20,
+                "column": 2
+              },
+              "end": {
+                "line": 22,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   ",
+                "range": [
+                  233,
+                  341
+                ],
+                "loc": {
+                  "start": {
+                    "line": 15,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": " map (fn) { return Monad.of(fn(this.value)); } ",
+                "range": [
+                  390,
+                  441
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 53
+                  }
+                }
+              },
+              {
+                "type": "Block",
+                "value": " So, I'm a monad because I have a bind method ",
+                "range": [
+                  445,
+                  495
+                ],
+                "loc": {
+                  "start": {
+                    "line": 25,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 52
+                  }
+                }
+              },
+              {
+                "type": "Block",
+                "value": "\n    A map function: used for chaining operations on Container\n  ",
+                "range": [
+                  498,
+                  567
+                ],
+                "loc": {
+                  "start": {
+                    "line": 26,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 4
+                  }
+                }
+              },
+              {
+                "type": "Block",
+                "value": "*\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Object}\n   ",
+                "range": [
+                  570,
+                  662
+                ],
+                "loc": {
+                  "start": {
+                    "line": 29,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": true
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "bind",
+              "range": [
+                665,
+                669
+              ],
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 2
+                },
+                "end": {
+                  "line": 34,
+                  "column": 6
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "fn",
+                  "range": [
+                    671,
+                    673
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 10
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "Identifier",
+                        "name": "fn",
+                        "range": [
+                          688,
+                          690
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 35,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 35,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "arguments": [
+                        {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              691,
+                              695
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 35,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 35,
+                                "column": 18
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "value",
+                            "range": [
+                              696,
+                              701
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 35,
+                                "column": 19
+                              },
+                              "end": {
+                                "line": 35,
+                                "column": 24
+                              }
+                            }
+                          },
+                          "range": [
+                            691,
+                            701
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 35,
+                              "column": 14
+                            },
+                            "end": {
+                              "line": 35,
+                              "column": 24
+                            }
+                          }
+                        }
+                      ],
+                      "range": [
+                        688,
+                        702
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 35,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 35,
+                          "column": 25
+                        }
+                      }
+                    },
+                    "range": [
+                      681,
+                      703
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 35,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 26
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  675,
+                  707
+                ],
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 12
+                  },
+                  "end": {
+                    "line": 36,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                670,
+                707
+              ],
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 7
+                },
+                "end": {
+                  "line": 36,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              665,
+              707
+            ],
+            "loc": {
+              "start": {
+                "line": 34,
+                "column": 2
+              },
+              "end": {
+                "line": 36,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": " map (fn) { return Monad.of(fn(this.value)); } ",
+                "range": [
+                  390,
+                  441
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 53
+                  }
+                }
+              },
+              {
+                "type": "Block",
+                "value": " So, I'm a monad because I have a bind method ",
+                "range": [
+                  445,
+                  495
+                ],
+                "loc": {
+                  "start": {
+                    "line": 25,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 52
+                  }
+                }
+              },
+              {
+                "type": "Block",
+                "value": "\n    A map function: used for chaining operations on Container\n  ",
+                "range": [
+                  498,
+                  567
+                ],
+                "loc": {
+                  "start": {
+                    "line": 26,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 4
+                  }
+                }
+              },
+              {
+                "type": "Block",
+                "value": "*\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Object}\n   ",
+                "range": [
+                  570,
+                  662
+                ],
+                "loc": {
+                  "start": {
+                    "line": 29,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          }
+        ],
+        "range": [
+          109,
+          709
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 28
+          },
+          "end": {
+            "line": 37,
+            "column": 1
+          }
+        }
+      },
+      "range": [
+        81,
+        709
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 37,
+          "column": 1
+        }
+      },
+      "leadingComments": [],
+      "name": "_",
+      "trailingComments": []
+    },
+    {
+      "type": "Identifier",
+      "declaration": {
+        "type": "Identifier",
+        "name": "Monad",
+        "range": [
+          725,
+          730
+        ],
+        "loc": {
+          "start": {
+            "line": 38,
+            "column": 15
+          },
+          "end": {
+            "line": 38,
+            "column": 20
+          }
+        }
+      },
+      "range": [
+        710,
+        731
+      ],
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 0
+        },
+        "end": {
+          "line": 39,
+          "column": 0
+        }
+      },
+      "name": "_",
+      "leadingComments": [],
+      "trailingComments": []
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "ClassDeclaration",
+        "id": {
+          "type": "Identifier",
+          "name": "Monad",
+          "range": [
+            87,
+            92
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 6
+            },
+            "end": {
+              "line": 7,
+              "column": 11
+            }
+          }
+        },
+        "superClass": {
+          "type": "Identifier",
+          "name": "Functor",
+          "range": [
+            101,
+            108
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 20
+            },
+            "end": {
+              "line": 7,
+              "column": 27
+            }
+          }
+        },
+        "body": {
+          "type": "ClassBody",
+          "body": [
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "constructor",
+                "range": [
+                  196,
+                  207
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 13
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "x",
+                    "range": [
+                      208,
+                      209
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 15
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "Super",
+                          "range": [
+                            217,
+                            222
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 13,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 13,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "x",
+                            "range": [
+                              223,
+                              224
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 13,
+                                "column": 10
+                              },
+                              "end": {
+                                "line": 13,
+                                "column": 11
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          217,
+                          225
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 12
+                          }
+                        }
+                      },
+                      "range": [
+                        217,
+                        226
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 13
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    211,
+                    230
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 12,
+                      "column": 17
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  207,
+                  230
+                ],
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "constructor",
+              "computed": false,
+              "range": [
+                196,
+                230
+              ],
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 2
+                },
+                "end": {
+                  "line": 14,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * @param {Object} x is the value of the Monad.\n   * @return {Monad}\n   ",
+                  "range": [
+                    113,
+                    193
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   ",
+                  "range": [
+                    233,
+                    341
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "of",
+                "range": [
+                  351,
+                  353
+                ],
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 11
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "x",
+                    "range": [
+                      354,
+                      355
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 13
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "Monad",
+                          "range": [
+                            374,
+                            379
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 21,
+                              "column": 15
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "x",
+                            "range": [
+                              380,
+                              381
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 21,
+                                "column": 21
+                              },
+                              "end": {
+                                "line": 21,
+                                "column": 22
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          370,
+                          382
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "range": [
+                        363,
+                        383
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 24
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    357,
+                    387
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 15
+                    },
+                    "end": {
+                      "line": 22,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  353,
+                  387
+                ],
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 11
+                  },
+                  "end": {
+                    "line": 22,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "method",
+              "computed": false,
+              "range": [
+                344,
+                387
+              ],
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 2
+                },
+                "end": {
+                  "line": 22,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": "*\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   ",
+                  "range": [
+                    233,
+                    341
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "trailingComments": [
+                {
+                  "type": "Block",
+                  "value": " map (fn) { return Monad.of(fn(this.value)); } ",
+                  "range": [
+                    390,
+                    441
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 53
+                    }
+                  }
+                },
+                {
+                  "type": "Block",
+                  "value": " So, I'm a monad because I have a bind method ",
+                  "range": [
+                    445,
+                    495
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 52
+                    }
+                  }
+                },
+                {
+                  "type": "Block",
+                  "value": "\n    A map function: used for chaining operations on Container\n  ",
+                  "range": [
+                    498,
+                    567
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 4
+                    }
+                  }
+                },
+                {
+                  "type": "Block",
+                  "value": "*\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Object}\n   ",
+                  "range": [
+                    570,
+                    662
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 29,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": true
+            },
+            {
+              "type": "MethodDefinition",
+              "key": {
+                "type": "Identifier",
+                "name": "bind",
+                "range": [
+                  665,
+                  669
+                ],
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 6
+                  }
+                }
+              },
+              "value": {
+                "type": "FunctionExpression",
+                "id": null,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "name": "fn",
+                    "range": [
+                      671,
+                      673
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 10
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "fn",
+                          "range": [
+                            688,
+                            690
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 35,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 35,
+                              "column": 13
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                691,
+                                695
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 35,
+                                  "column": 14
+                                },
+                                "end": {
+                                  "line": 35,
+                                  "column": 18
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "value",
+                              "range": [
+                                696,
+                                701
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 35,
+                                  "column": 19
+                                },
+                                "end": {
+                                  "line": 35,
+                                  "column": 24
+                                }
+                              }
+                            },
+                            "range": [
+                              691,
+                              701
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 35,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 35,
+                                "column": 24
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          688,
+                          702
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 35,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 35,
+                            "column": 25
+                          }
+                        }
+                      },
+                      "range": [
+                        681,
+                        703
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 35,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 35,
+                          "column": 26
+                        }
+                      }
+                    }
+                  ],
+                  "range": [
+                    675,
+                    707
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 3
+                    }
+                  }
+                },
+                "generator": false,
+                "expression": false,
+                "range": [
+                  670,
+                  707
+                ],
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 36,
+                    "column": 3
+                  }
+                }
+              },
+              "kind": "method",
+              "computed": false,
+              "range": [
+                665,
+                707
+              ],
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 2
+                },
+                "end": {
+                  "line": 36,
+                  "column": 3
+                }
+              },
+              "leadingComments": [
+                {
+                  "type": "Block",
+                  "value": " map (fn) { return Monad.of(fn(this.value)); } ",
+                  "range": [
+                    390,
+                    441
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 53
+                    }
+                  }
+                },
+                {
+                  "type": "Block",
+                  "value": " So, I'm a monad because I have a bind method ",
+                  "range": [
+                    445,
+                    495
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 52
+                    }
+                  }
+                },
+                {
+                  "type": "Block",
+                  "value": "\n    A map function: used for chaining operations on Container\n  ",
+                  "range": [
+                    498,
+                    567
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 4
+                    }
+                  }
+                },
+                {
+                  "type": "Block",
+                  "value": "*\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Object}\n   ",
+                  "range": [
+                    570,
+                    662
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 29,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 5
+                    }
+                  }
+                }
+              ],
+              "static": false
+            }
+          ],
+          "range": [
+            109,
+            709
+          ],
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 28
+            },
+            "end": {
+              "line": 37,
+              "column": 1
+            }
+          }
+        },
+        "range": [
+          81,
+          709
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 0
+          },
+          "end": {
+            "line": 37,
+            "column": 1
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Monad\n * Yo Ma! I'm a Monad\n ",
+            "range": [
+              42,
+              80
+            ],
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "__esdoc__pseudo_export": false,
+        "trailingComments": []
+      },
+      "range": [
+        710,
+        731
+      ],
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 0
+        },
+        "end": {
+          "line": 39,
+          "column": 0
+        }
+      },
+      "leadingComments": null
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    731
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 39,
+      "column": 0
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * Monad\n * Yo Ma! I'm a Monad\n ",
+      "range": [
+        42,
+        80
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @param {Object} x is the value of the Monad.\n   * @return {Monad}\n   ",
+      "range": [
+        113,
+        193
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 11,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   ",
+      "range": [
+        233,
+        341
+      ],
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": " map (fn) { return Monad.of(fn(this.value)); } ",
+      "range": [
+        390,
+        441
+      ],
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 2
+        },
+        "end": {
+          "line": 23,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": " So, I'm a monad because I have a bind method ",
+      "range": [
+        445,
+        495
+      ],
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "\n    A map function: used for chaining operations on Container\n  ",
+      "range": [
+        498,
+        567
+      ],
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 28,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Object}\n   ",
+      "range": [
+        570,
+        662
+      ],
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 2
+        },
+        "end": {
+          "line": 33,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

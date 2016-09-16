@@ -1,0 +1,10 @@
+HOWTO.md
+TODO.md
+CONTENT.md
+/sandbox/*
+/old/*
+.DS_Store
+/samples/node_modules/*
+.idea/*
+/node_modules/*
+PREZ_JSC_2016/*

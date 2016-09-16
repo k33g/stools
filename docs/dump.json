@@ -1,0 +1,3061 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Container.js",
+    "memberof": null,
+    "longname": "src/Container.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 4,
+    "content": "/**\n * Container\n */\nclass Container {\n  /**\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   */\n  constructor(x) {\n    /**\n     * @access private\n     * @type {Object}\n     */\n    const value = x;\n    Object.defineProperty(this, \"value\", { get: () => value })\n  }\n  /**\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   */\n  static of(x) {\n    return new Container(x);\n  }\n}\nmodule.exports = Container\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Container",
+    "memberof": "src/Container.js",
+    "longname": "src/Container.js~Container",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Container.js",
+    "importStyle": "Container",
+    "description": "Container",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 2,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Container.js~Container",
+    "longname": "src/Container.js~Container#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Container."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Container"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 3,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "of",
+    "memberof": "src/Container.js~Container",
+    "longname": "src/Container.js~Container.of",
+    "access": "public",
+    "description": "",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Container."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Container"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 4,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Either.js",
+    "memberof": null,
+    "longname": "src/Either.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Right = require('./Right.js');\nconst Left = require('./Left.js');\n\n/**\n * Either\n */\nclass Either {\n  /**\n   * @access public\n   * @param {Object} x is the value of the Left.\n   * @return {Left}\n   */\n  static Left(x) { return new Left(x); }\n  /**\n   * @access public\n   * @param {Object} x is the value of the Right.\n   * @return {Right}\n   */\n  static Right(x) { return new Right(x); }\n  /**\n   * @access public\n   * @param {Object} x is the value of the Either.\n   * @return {Either} ({Left} or {Right})\n   */\n  static fromNullable(x) {\n    return (x !== null && x !== undefined)\n      ? Either.Right(x)\n      : Either.Left(x);\n  }\n /**\n  * @access public\n  * @param {Object} x is the value of the Right.\n  * @return {Right}\n  */\n  static of(x) { return Either.Right(x); }\n}\n\nmodule.exports = Either\n"
+  },
+  {
+    "__docId__": 5,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Right",
+    "memberof": "src/Either.js",
+    "longname": "src/Either.js~Right",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Either.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Left",
+    "memberof": "src/Either.js",
+    "longname": "src/Either.js~Left",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Either.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Either",
+    "memberof": "src/Either.js",
+    "longname": "src/Either.js~Either",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Either.js",
+    "importStyle": "Either",
+    "description": "Either",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 8,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "Left",
+    "memberof": "src/Either.js~Either",
+    "longname": "src/Either.js~Either.Left",
+    "access": "public",
+    "description": "",
+    "lineNumber": 13,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Left."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Left"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 9,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "Right",
+    "memberof": "src/Either.js~Either",
+    "longname": "src/Either.js~Either.Right",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Right."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Right"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 10,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "fromNullable",
+    "memberof": "src/Either.js~Either",
+    "longname": "src/Either.js~Either.fromNullable",
+    "access": "public",
+    "description": "",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Either."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Either"
+      ],
+      "spread": false,
+      "description": "({Left} or {Right})"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 11,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "of",
+    "memberof": "src/Either.js~Either",
+    "longname": "src/Either.js~Either.of",
+    "access": "public",
+    "description": "",
+    "lineNumber": 35,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Right."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Right"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 12,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Fail.js",
+    "memberof": null,
+    "longname": "src/Fail.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Monad = require('./Monad.js');\n\n/**\n * Fail\n */\nclass Fail extends Monad {\n  /**\n   * @param {Object} x is the value of the Fail.\n   * @return {Fail}\n   */\n  constructor(x) {\n    super(x);\n  }\n  // overrides Functor.map\n  /**\n   * @access public\n   * @return {Fail}\n   */\n  map() {\n    return this;\n  }\n  /**\n   * @access public\n   * @param {Monad} otherContainer is a Monad (Fail or Success).\n   * @return {Fail}\n   */\n   ap(otherContainer) { //\n     return otherContainer instanceof Fail\n       ? new Fail(this.value.concat(otherContainer.value))\n       : this\n   }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isFail() {\n    return true;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isSuccess() {\n    return false;\n  }\n  /**\n   * @access public\n   * @param {function} failureFn is a function.\n   * @param {function} successFn is a function.\n   * @return {Object}\n   */\n  cata(failureFn, successFn) {\n    return failureFn(this.value);\n  }\n}\nmodule.exports = Fail\n"
+  },
+  {
+    "__docId__": 13,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Monad",
+    "memberof": "src/Fail.js",
+    "longname": "src/Fail.js~Monad",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Fail.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 14,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Fail",
+    "memberof": "src/Fail.js",
+    "longname": "src/Fail.js~Fail",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Fail.js",
+    "importStyle": "Fail",
+    "description": "Fail",
+    "lineNumber": 6,
+    "interface": false,
+    "extends": [
+      "Monad"
+    ]
+  },
+  {
+    "__docId__": 15,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Fail.js~Fail",
+    "longname": "src/Fail.js~Fail#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Fail."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Fail"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 16,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "map",
+    "memberof": "src/Fail.js~Fail",
+    "longname": "src/Fail.js~Fail#map",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Fail"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 17,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "ap",
+    "memberof": "src/Fail.js~Fail",
+    "longname": "src/Fail.js~Fail#ap",
+    "access": "public",
+    "description": "",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Monad"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "otherContainer",
+        "description": "is a Monad (Fail or Success)."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Fail"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 18,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isFail",
+    "memberof": "src/Fail.js~Fail",
+    "longname": "src/Fail.js~Fail#isFail",
+    "access": "public",
+    "description": "",
+    "lineNumber": 36,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 19,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isSuccess",
+    "memberof": "src/Fail.js~Fail",
+    "longname": "src/Fail.js~Fail#isSuccess",
+    "access": "public",
+    "description": "",
+    "lineNumber": 43,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 20,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "cata",
+    "memberof": "src/Fail.js~Fail",
+    "longname": "src/Fail.js~Fail#cata",
+    "access": "public",
+    "description": "",
+    "lineNumber": 52,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "failureFn",
+        "description": "is a function."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "successFn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 21,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Functor.js",
+    "memberof": null,
+    "longname": "src/Functor.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Container = require('./Container.js');\n\n/**\n * Functor\n */\nclass Functor extends Container {\n  /**\n   * @param {Object} x is the value of the Functor.\n   * @return {Functor}\n   */\n  constructor(x) {\n    super(x);\n  }\n  /**\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   */\n  static of(x) {\n    return new Functor(x);\n  }\n  /*\n    A map function: used for chaining operations on Container\n  */\n  /**\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Functor}\n   */\n  map (fn) {\n    //return Functor.of(fn(this.value));\n    return new this.constructor(fn(this.value));\n  }\n}\nmodule.exports = Functor\n"
+  },
+  {
+    "__docId__": 22,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Container",
+    "memberof": "src/Functor.js",
+    "longname": "src/Functor.js~Container",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Functor.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 23,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Functor",
+    "memberof": "src/Functor.js",
+    "longname": "src/Functor.js~Functor",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Functor.js",
+    "importStyle": "Functor",
+    "description": "Functor",
+    "lineNumber": 6,
+    "interface": false,
+    "extends": [
+      "Container"
+    ]
+  },
+  {
+    "__docId__": 24,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Functor.js~Functor",
+    "longname": "src/Functor.js~Functor#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Functor."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Functor"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 25,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "of",
+    "memberof": "src/Functor.js~Functor",
+    "longname": "src/Functor.js~Functor.of",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Container."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Container"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 26,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "map",
+    "memberof": "src/Functor.js~Functor",
+    "longname": "src/Functor.js~Functor#map",
+    "access": "public",
+    "description": "",
+    "lineNumber": 30,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Functor"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 27,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Left.js",
+    "memberof": null,
+    "longname": "src/Left.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 2,
+    "content": "//const Monad = require('./Monad.js');\nconst Functor = require('./Functor.js');\n\n/**\n * Left\n */\nclass Left extends Functor {\n  /**\n   * @param {Object} x is the value of the Left.\n   * @return {Left}\n   */\n  constructor(x) {\n    super(x);\n  }\n  // overrides Functor.map\n  /**\n   * @access public\n   * @return {Left}\n   */\n  map() {\n    return this;\n  }\n  /**\n   * @access public\n   * @param {Object} value is an object.\n   * @return {Object}\n   */\n  getOrElse(value) {\n    return value;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isLeft() {\n    return true;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isRight() {\n    return false;\n  }\n  /**\n   * @access public\n   * @param {function} leftFn is a function.\n   * @param {function} rightFn is a function.\n   * @return {Object}\n   */\n  cata(leftFn, rightFn) {\n    return leftFn(this.value);\n  }\n\n}\nmodule.exports = Left\n"
+  },
+  {
+    "__docId__": 28,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Functor",
+    "memberof": "src/Left.js",
+    "longname": "src/Left.js~Functor",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Left.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 29,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Left",
+    "memberof": "src/Left.js",
+    "longname": "src/Left.js~Left",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Left.js",
+    "importStyle": "Left",
+    "description": "Left",
+    "lineNumber": 7,
+    "interface": false,
+    "extends": [
+      "Functor"
+    ]
+  },
+  {
+    "__docId__": 30,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Left.js~Left",
+    "longname": "src/Left.js~Left#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Left."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Left"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 31,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "map",
+    "memberof": "src/Left.js~Left",
+    "longname": "src/Left.js~Left#map",
+    "access": "public",
+    "description": "",
+    "lineNumber": 20,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Left"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 32,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getOrElse",
+    "memberof": "src/Left.js~Left",
+    "longname": "src/Left.js~Left#getOrElse",
+    "access": "public",
+    "description": "",
+    "lineNumber": 28,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "is an object."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 33,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isLeft",
+    "memberof": "src/Left.js~Left",
+    "longname": "src/Left.js~Left#isLeft",
+    "access": "public",
+    "description": "",
+    "lineNumber": 35,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 34,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isRight",
+    "memberof": "src/Left.js~Left",
+    "longname": "src/Left.js~Left#isRight",
+    "access": "public",
+    "description": "",
+    "lineNumber": 42,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 35,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "cata",
+    "memberof": "src/Left.js~Left",
+    "longname": "src/Left.js~Left#cata",
+    "access": "public",
+    "description": "",
+    "lineNumber": 51,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "leftFn",
+        "description": "is a function."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rightFn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 36,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Maybe.js",
+    "memberof": null,
+    "longname": "src/Maybe.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Some = require('./Some.js');\nconst None = require('./None.js');\n\n/**\n * Maybe\n */\nclass Maybe {\n  /**\n   * @access public\n   * @param {Object} x is the value of the Some.\n   * @return {Some}\n   */\n  static Some(x) { return new Some(x); }\n  /**\n   * @access public\n   * @return {None}\n   */\n  static None() { return new None(); }\n  /**\n   * @access public\n   * @param {Object} x is the value of the Maybe.\n   * @return {Maybe} ({Some} or {None})\n   */\n  static fromNullable(x) {\n    return (x !== null && x !== undefined)\n      ? Maybe.Some(x)\n      : Maybe.None();\n  }\n /**\n  * @access public\n  * @param {Object} x is the value of the Some.\n  * @return {Some}\n  */\n  static of(x) { return Maybe.Some(x); }\n}\n\nmodule.exports = Maybe\n"
+  },
+  {
+    "__docId__": 37,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Some",
+    "memberof": "src/Maybe.js",
+    "longname": "src/Maybe.js~Some",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Maybe.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 38,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "None",
+    "memberof": "src/Maybe.js",
+    "longname": "src/Maybe.js~None",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Maybe.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 39,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Maybe",
+    "memberof": "src/Maybe.js",
+    "longname": "src/Maybe.js~Maybe",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Maybe.js",
+    "importStyle": "Maybe",
+    "description": "Maybe",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 40,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "Some",
+    "memberof": "src/Maybe.js~Maybe",
+    "longname": "src/Maybe.js~Maybe.Some",
+    "access": "public",
+    "description": "",
+    "lineNumber": 13,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Some."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Some"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 41,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "None",
+    "memberof": "src/Maybe.js~Maybe",
+    "longname": "src/Maybe.js~Maybe.None",
+    "access": "public",
+    "description": "",
+    "lineNumber": 18,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "None"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 42,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "fromNullable",
+    "memberof": "src/Maybe.js~Maybe",
+    "longname": "src/Maybe.js~Maybe.fromNullable",
+    "access": "public",
+    "description": "",
+    "lineNumber": 24,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Maybe."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Maybe"
+      ],
+      "spread": false,
+      "description": "({Some} or {None})"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 43,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "of",
+    "memberof": "src/Maybe.js~Maybe",
+    "longname": "src/Maybe.js~Maybe.of",
+    "access": "public",
+    "description": "",
+    "lineNumber": 34,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Some."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Some"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 44,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Monad.js",
+    "memberof": null,
+    "longname": "src/Monad.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Functor = require('./Functor.js');\n\n/**\n * Monad\n * Yo Ma! I'm a Monad\n */\nclass Monad extends Functor {\n  /**\n   * @param {Object} x is the value of the Monad.\n   * @return {Monad}\n   */\n  constructor(x) {\n    super(x);\n  }\n  /**\n   * @access public\n   * @param {Object} x is the value of the Container.\n   * @return {Container}\n   */\n  static of(x) {\n    return new Monad(x);\n  }\n  /* map (fn) { return Monad.of(fn(this.value)); } */\n\n  /* So, I'm a monad because I have a bind method */\n  /*\n    A map function: used for chaining operations on Container\n  */\n  /**\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Object}\n   */\n  bind (fn) {\n    return fn(this.value);\n  }\n}\nmodule.exports = Monad\n"
+  },
+  {
+    "__docId__": 45,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Functor",
+    "memberof": "src/Monad.js",
+    "longname": "src/Monad.js~Functor",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Monad.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Monad",
+    "memberof": "src/Monad.js",
+    "longname": "src/Monad.js~Monad",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Monad.js",
+    "importStyle": "Monad",
+    "description": "Monad\nYo Ma! I'm a Monad",
+    "lineNumber": 7,
+    "interface": false,
+    "extends": [
+      "Functor"
+    ]
+  },
+  {
+    "__docId__": 47,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Monad.js~Monad",
+    "longname": "src/Monad.js~Monad#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Monad."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Monad"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 48,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "of",
+    "memberof": "src/Monad.js~Monad",
+    "longname": "src/Monad.js~Monad.of",
+    "access": "public",
+    "description": "",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Container."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Container"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 49,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "bind",
+    "memberof": "src/Monad.js~Monad",
+    "longname": "src/Monad.js~Monad#bind",
+    "access": "public",
+    "description": "",
+    "lineNumber": 34,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/None.js",
+    "memberof": null,
+    "longname": "src/None.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Monad = require('./Monad.js');\n\n/**\n * None\n */\nclass None extends Monad {\n  /**\n   * @return {None}\n   */\n  constructor() {\n    super(null)\n  }\n  // overrides Functor.map\n  /**\n   * @access public\n   * @return {None}\n   */\n  map() {\n    return this;\n  }\n  // overrides Monad.map\n  /**\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Object}\n   */\n  bind (fn) {\n    return this.value;\n  }\n  /**\n   * @access public\n   * @param {Object} value is an object.\n   * @return {Object}\n   */\n  getOrElse(value) {\n    return value;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isNone() {\n    return true;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isSome() {\n    return false;\n  }\n\n}\nmodule.exports = None\n"
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Monad",
+    "memberof": "src/None.js",
+    "longname": "src/None.js~Monad",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/None.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "None",
+    "memberof": "src/None.js",
+    "longname": "src/None.js~None",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/None.js",
+    "importStyle": "None",
+    "description": "None",
+    "lineNumber": 6,
+    "interface": false,
+    "extends": [
+      "Monad"
+    ]
+  },
+  {
+    "__docId__": 53,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/None.js~None",
+    "longname": "src/None.js~None#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 10,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "None"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "map",
+    "memberof": "src/None.js~None",
+    "longname": "src/None.js~None#map",
+    "access": "public",
+    "description": "",
+    "lineNumber": 18,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "None"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "bind",
+    "memberof": "src/None.js~None",
+    "longname": "src/None.js~None#bind",
+    "access": "public",
+    "description": "",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getOrElse",
+    "memberof": "src/None.js~None",
+    "longname": "src/None.js~None#getOrElse",
+    "access": "public",
+    "description": "",
+    "lineNumber": 35,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "is an object."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isNone",
+    "memberof": "src/None.js~None",
+    "longname": "src/None.js~None#isNone",
+    "access": "public",
+    "description": "",
+    "lineNumber": 42,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isSome",
+    "memberof": "src/None.js~None",
+    "longname": "src/None.js~None#isSome",
+    "access": "public",
+    "description": "",
+    "lineNumber": 49,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Right.js",
+    "memberof": null,
+    "longname": "src/Right.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 2,
+    "content": "//const Monad = require('./Monad.js');\nconst Functor = require('./Functor.js');\n\n/**\n * Right\n * a sub-type of Either\n */\nclass Right extends Functor {\n  /**\n   * @param {Object} x is the value of the Right.\n   * @return {Right}\n   */\n  constructor(x) {\n    super(x);\n  }\n  // overrides Functor.map\n  /**\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Right}\n   */\n  map(fn) {\n    return new Right(fn(this.value));\n  }\n  /**\n   * @access public\n   * @return {Object}\n   */\n  getOrElse() {\n    return this.value;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isLeft() {\n    return false;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isRight() {\n    return true;\n  }\n  /**\n   * @access public\n   * @param {function} leftFn is a function.\n   * @param {function} rightFn is a function.\n   * @return {Object}\n   */\n  cata(leftFn, rightFn) {\n    return rightFn(this.value);\n  }\n}\n\nmodule.exports = Right\n"
+  },
+  {
+    "__docId__": 60,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Functor",
+    "memberof": "src/Right.js",
+    "longname": "src/Right.js~Functor",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Right.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Right",
+    "memberof": "src/Right.js",
+    "longname": "src/Right.js~Right",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Right.js",
+    "importStyle": "Right",
+    "description": "Right\na sub-type of Either",
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "Functor"
+    ]
+  },
+  {
+    "__docId__": 62,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Right.js~Right",
+    "longname": "src/Right.js~Right#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 13,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Right."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Right"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "map",
+    "memberof": "src/Right.js~Right",
+    "longname": "src/Right.js~Right#map",
+    "access": "public",
+    "description": "",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Right"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getOrElse",
+    "memberof": "src/Right.js~Right",
+    "longname": "src/Right.js~Right#getOrElse",
+    "access": "public",
+    "description": "",
+    "lineNumber": 29,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isLeft",
+    "memberof": "src/Right.js~Right",
+    "longname": "src/Right.js~Right#isLeft",
+    "access": "public",
+    "description": "",
+    "lineNumber": 36,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isRight",
+    "memberof": "src/Right.js~Right",
+    "longname": "src/Right.js~Right#isRight",
+    "access": "public",
+    "description": "",
+    "lineNumber": 43,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "cata",
+    "memberof": "src/Right.js~Right",
+    "longname": "src/Right.js~Right#cata",
+    "access": "public",
+    "description": "",
+    "lineNumber": 52,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "leftFn",
+        "description": "is a function."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rightFn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Some.js",
+    "memberof": null,
+    "longname": "src/Some.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Monad = require('./Monad.js');\nconst None = require('./None.js');\n\n/**\n * Some\n */\nclass Some extends Monad {\n  /**\n   * @param {Object} x is the value of the Some.\n   * @return {Some}\n   */\n  constructor(x) {\n    super(x);\n  }\n  // overrides Functor.map\n  /**\n   * @access public\n   * @param {function} fn is a function.\n   * @return {Maybe} ({Some} or {None})\n   */\n  map(fn) {\n    let res = fn(this.value);\n    if(res == null || res == undefined) {\n      return new None()\n    }\n    return new Some(res);\n  }\n  /**\n   * @access public\n   * @return {Object}\n   */\n  getOrElse() {\n    return this.value;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isNone() {\n    return false;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isSome() {\n    return true;\n  }\n}\n\nmodule.exports = Some\n"
+  },
+  {
+    "__docId__": 69,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Monad",
+    "memberof": "src/Some.js",
+    "longname": "src/Some.js~Monad",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Some.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "None",
+    "memberof": "src/Some.js",
+    "longname": "src/Some.js~None",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Some.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Some",
+    "memberof": "src/Some.js",
+    "longname": "src/Some.js~Some",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Some.js",
+    "importStyle": "Some",
+    "description": "Some",
+    "lineNumber": 7,
+    "interface": false,
+    "extends": [
+      "Monad"
+    ]
+  },
+  {
+    "__docId__": 72,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Some.js~Some",
+    "longname": "src/Some.js~Some#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Some."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Some"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "map",
+    "memberof": "src/Some.js~Some",
+    "longname": "src/Some.js~Some#map",
+    "access": "public",
+    "description": "",
+    "lineNumber": 21,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Maybe"
+      ],
+      "spread": false,
+      "description": "({Some} or {None})"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getOrElse",
+    "memberof": "src/Some.js~Some",
+    "longname": "src/Some.js~Some#getOrElse",
+    "access": "public",
+    "description": "",
+    "lineNumber": 32,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isNone",
+    "memberof": "src/Some.js~Some",
+    "longname": "src/Some.js~Some#isNone",
+    "access": "public",
+    "description": "",
+    "lineNumber": 39,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isSome",
+    "memberof": "src/Some.js~Some",
+    "longname": "src/Some.js~Some#isSome",
+    "access": "public",
+    "description": "",
+    "lineNumber": 46,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Success.js",
+    "memberof": null,
+    "longname": "src/Success.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Monad = require('./Monad.js');\nconst Fail = require('./Fail.js');\n\n/**\n * Success\n */\nclass Success extends Monad {\n  /**\n   * @param {Object} x is the value of the Success.\n   * @return {Success}\n   */\n  constructor(x) {\n    super(x);\n  }\n  //map(fn) { return new Success(fn(this.value)); }\n  /**\n   * @access public\n   * @param {Monad} otherContainer is a Monad (Fail or Success).\n   * @return {Success or Fail}\n   */\n   ap(otherContainer) {\n     return otherContainer instanceof Fail\n       ? otherContainer\n       : otherContainer.map(this.value)\n   }\n  /**\n   * @access public\n   * @return {Object}\n   */\n  getOrElse() {\n    return this.value;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isFail() {\n    return false;\n  }\n  /**\n   * @access public\n   * @return {boolean}\n   */\n  isSuccess() {\n    return true;\n  }\n  /**\n   * @access public\n   * @param {function} failureFn is a function.\n   * @param {function} successFn is a function.\n   * @return {Object}\n   */\n  cata(failureFn, successFn) {\n    return successFn(this.value);\n  }\n}\n\nmodule.exports = Success\n"
+  },
+  {
+    "__docId__": 78,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Monad",
+    "memberof": "src/Success.js",
+    "longname": "src/Success.js~Monad",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Success.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Fail",
+    "memberof": "src/Success.js",
+    "longname": "src/Success.js~Fail",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Success.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Success",
+    "memberof": "src/Success.js",
+    "longname": "src/Success.js~Success",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Success.js",
+    "importStyle": "Success",
+    "description": "Success",
+    "lineNumber": 7,
+    "interface": false,
+    "extends": [
+      "Monad"
+    ]
+  },
+  {
+    "__docId__": 81,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/Success.js~Success",
+    "longname": "src/Success.js~Success#constructor",
+    "access": null,
+    "description": "",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Success."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Success"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "ap",
+    "memberof": "src/Success.js~Success",
+    "longname": "src/Success.js~Success#ap",
+    "access": "public",
+    "description": "",
+    "lineNumber": 21,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Monad"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "otherContainer",
+        "description": "is a Monad (Fail or Success)."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Success or Fail"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getOrElse",
+    "memberof": "src/Success.js~Success",
+    "longname": "src/Success.js~Success#getOrElse",
+    "access": "public",
+    "description": "",
+    "lineNumber": 30,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 84,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isFail",
+    "memberof": "src/Success.js~Success",
+    "longname": "src/Success.js~Success#isFail",
+    "access": "public",
+    "description": "",
+    "lineNumber": 37,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "isSuccess",
+    "memberof": "src/Success.js~Success",
+    "longname": "src/Success.js~Success#isSuccess",
+    "access": "public",
+    "description": "",
+    "lineNumber": 44,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "cata",
+    "memberof": "src/Success.js~Success",
+    "longname": "src/Success.js~Success#cata",
+    "access": "public",
+    "description": "",
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "failureFn",
+        "description": "is a function."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "successFn",
+        "description": "is a function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 87,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/Validation.js",
+    "memberof": null,
+    "longname": "src/Validation.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const Success = require('./Success.js');\nconst Fail = require('./Fail.js');\n\n/**\n * Validation\n */\nclass Validation {\n  /**\n   * @access public\n   * @param {Object} x is the value of the Success.\n   * @return {Success}\n   */\n  static Success(x) { return new Success(x); }\n  /**\n   * @access public\n   * @param {Object} x is the value of the Fail.\n   * @return {Fail}\n   */\n  static Fail(x) { return new Fail(x); }\n /**\n  * @access public\n  * @param {Object} x is the value of the Right.\n  * @return {Success}\n  */\n  static of(x) { return Validation.Success(x); }\n}\n\nmodule.exports = Validation\n"
+  },
+  {
+    "__docId__": 88,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Success",
+    "memberof": "src/Validation.js",
+    "longname": "src/Validation.js~Success",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Validation.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "Fail",
+    "memberof": "src/Validation.js",
+    "longname": "src/Validation.js~Fail",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/Validation.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Validation",
+    "memberof": "src/Validation.js",
+    "longname": "src/Validation.js~Validation",
+    "access": null,
+    "export": true,
+    "importPath": "stools/src/Validation.js",
+    "importStyle": "Validation",
+    "description": "Validation",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "Success",
+    "memberof": "src/Validation.js~Validation",
+    "longname": "src/Validation.js~Validation.Success",
+    "access": "public",
+    "description": "",
+    "lineNumber": 13,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Success."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Success"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 92,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "Fail",
+    "memberof": "src/Validation.js~Validation",
+    "longname": "src/Validation.js~Validation.Fail",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Fail."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Fail"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 93,
+    "kind": "method",
+    "static": true,
+    "variation": null,
+    "name": "of",
+    "memberof": "src/Validation.js~Validation",
+    "longname": "src/Validation.js~Validation.of",
+    "access": "public",
+    "description": "",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": "is the value of the Right."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Success"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 94,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/tools.js",
+    "memberof": null,
+    "longname": "src/tools.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "let show = (...args) => {\n  let args2shows = []\n  let types = [\"Container\", \"Functor\", \"Monad\", \"Maybe\", \"None\", \"Some\", \"Either\", \"Left\", \"Right\", \"Validation\", \"Success\", \"Fail\"]\n  let transform = (o) => {\n    var clone = Object.assign({value:o.value}, o);\n    return {type:o.constructor, instance:clone}\n  }\n\n  args.forEach(arg => {\n    if(types.find(name => name === arg.constructor.name)) {\n      args2shows.push(transform(arg))\n    } else {\n      args2shows.push(arg)\n    }\n  })\n  console.log(...args2shows)\n}\n\nmodule.exports = {\n  show: show\n}\n"
+  },
+  {
+    "__docId__": 95,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "show",
+    "memberof": "src/tools.js",
+    "longname": "src/tools.js~show",
+    "access": null,
+    "export": false,
+    "importPath": "stools/src/tools.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 98,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 99,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 100,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 101,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 102,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 103,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 104,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 105,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 106,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 108,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 109,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 111,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 113,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 114,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 115,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 116,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 117,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 118,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 121,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 122,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 124,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 125,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 126,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 127,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 128,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 129,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 130,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 131,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 132,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 133,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 134,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 135,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 136,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 137,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 138,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 139,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 140,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 141,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 142,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 143,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 145,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 146,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 147,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 148,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 149,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 150,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 151,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 152,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  }
+]
