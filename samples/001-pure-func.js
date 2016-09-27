@@ -26,7 +26,8 @@ badHey(); // I'm not sure that `hey()` shows always "Bob" 🤔
           // `hey()` -> void => can't test 😈
 
 // pure function ✨🎉
-
+//TODO search Linter about pure function with JavaScript
+// ESLint
 function goodHey({name}) { //🖐 named parameter
   return `Hello ${name}`;
 }

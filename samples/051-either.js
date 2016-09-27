@@ -18,9 +18,13 @@ let getReposOf = (handle) => {
 }
 
 getReposOf("k33g").then(results => {
-  results.isRight() ? results.value.forEach(repo => console.log(repo.name)) : console.log(results.value)
+  results.isRight()
+  ? results.value.forEach(repo => console.log(repo.name))
+  : console.log(results.value)
 })
 
 getReposOf("k33_g").then(results => {
-  results.isRight() ? results.value.forEach(repo => console.log(repo.name)) : console.log(results.value)
+  results.isRight()
+  ? results.value.forEach(repo => console.log(repo.name))
+  : console.log(results.value)
 })

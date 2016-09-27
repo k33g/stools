@@ -60,10 +60,10 @@ Validation.of(
         (repo) =>
           (assignee) => { return {title, body, owner, repo, assignee} } // the result
 )
-.ap(checkTitle("Huston?"))
+.ap(checkTitle("AlpesJUG - Grenoble"))
 .ap(checkBody(["## I've got a problem", "> this a WIP", ":octocat:", ":heart:"].join("")))
 .ap(checkOwner("UnitedFederationOfPlanets"))
-.ap(checkRepo("JugSummerCamp")) // "repo-00"
+.ap(checkRepo("repo-00")) // "repo-00"
 .ap(checkAssignee("k33g")) // "k33g"
 .cata(
   (errors) => console.log(errors),

@@ -10,9 +10,11 @@
 function decouper(aliments)  {
   return `morceaux de ${aliments}`;
 }
+// if not frites return true
 function sansFrite(aliment) {
   return aliment !== "🍟";
 }
+// if not oignon return true
 function sansOignon(aliment) {
   return aliment !== "😭";
 }

@@ -35,7 +35,7 @@ let iWantSomethingSpecial =
 
 let bananesKebab = iWantSomethingSpecial.reduce((resultatIntermediaire, ingredient) => {
   return resultatIntermediaire + ingredient + " "
-}, "😜🌮 avec: ")
+}, "😜 🌮 avec: ")
 
 let kebab = mesIngredientsPreferes.reduce((resultatIntermediaire, ingredient) => {
   return resultatIntermediaire + ingredient + " "
